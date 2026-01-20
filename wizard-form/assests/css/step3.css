@@ -1,0 +1,297 @@
+/* ===== PRICING SECTION ===== */
+.pricing-section {
+  margin-bottom: 30px;
+}
+
+.fee-table {
+  margin-bottom: 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.fee-header {
+  display: grid;
+  grid-template-columns: 1fr 0.8fr 0.8fr;
+  background: #333;
+  color: #fff;
+  padding: 15px 20px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.fee-row {
+  display: grid;
+  grid-template-columns: 1fr 0.8fr 0.8fr;
+  padding: 15px 20px;
+  border-top: 1px solid #e0e0e0;
+  font-size: 14px;
+  color: #333;
+}
+
+.fee-row:last-child {
+  border-top: 1px solid #e0e0e0;
+}
+
+.fee-col {
+  display: flex;
+  align-items: center;
+  padding: 5px 0;
+}
+
+/* ===== COUPON AND PAYMENT SECTION ===== */
+.coupon-payment-section {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 25px;
+  margin-bottom: 30px;
+  background: #fff;
+}
+
+.coupon-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.coupon-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.coupon-left label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.coupon-input {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.btn-apply {
+  background: #ffa500;
+  color: #fff;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  width: fit-content;
+  transition: background 0.3s;
+}
+
+.btn-apply:hover {
+  background: #ff8c00;
+}
+
+.coupon-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+}
+
+.cost-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #333;
+}
+
+.cost-row span:first-child {
+  font-weight: 500;
+}
+
+.cost-row span:last-child {
+  font-weight: 600;
+}
+
+.payment-box {
+  display: flex;
+}
+
+.btn-payment {
+  width: 100%;
+  max-width: 400px;
+  background: #333;
+  color: #fff;
+  padding: 18px 25px;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.3s;
+}
+
+.btn-payment:hover:not(:disabled) {
+  background: #555;
+}
+
+.btn-payment:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-payment span {
+  font-weight: 700;
+  font-size: 16px;
+}
+
+/* ===== CUSTOMER DETAILS SECTION ===== */
+.customer-details-section {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 25px;
+  margin-bottom: 30px;
+  background: #fff;
+}
+
+.customer-details-section h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.details-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-field.full-width {
+  grid-column: 1 / -1;
+}
+
+.form-field label {
+  font-size: 13px;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.form-field input,
+.form-field textarea {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #333;
+  font-family: Arial, sans-serif;
+}
+
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+  color: #999;
+}
+
+.form-field textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* ===== ACTION BUTTONS ===== */
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 30px;
+  padding: 20px;
+}
+
+.btn-back,
+.btn-book,
+.btn-cancel {
+  padding: 14px 40px;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-back {
+  background: #000;
+  color: #fff;
+}
+
+.btn-back:hover {
+  background: #333;
+}
+
+.btn-book {
+  background: #ffa500;
+  color: #fff;
+}
+
+.btn-book:hover {
+  background: #ff8c00;
+}
+
+.btn-cancel {
+  background: #000;
+  color: #fff;
+}
+
+.btn-cancel:hover {
+  background: #333;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .coupon-box {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .details-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .fee-header,
+  .fee-row {
+    grid-template-columns: 1fr 1fr 1fr;
+    font-size: 12px;
+  }
+
+  .details-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+  }
+
+  .btn-back,
+  .btn-book,
+  .btn-cancel {
+    width: 100%;
+  }
+
+  .btn-payment {
+    max-width: 100%;
+  }
+}
