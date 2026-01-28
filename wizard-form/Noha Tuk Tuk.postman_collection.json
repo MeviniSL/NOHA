@@ -1,0 +1,5930 @@
+{
+  "info": {
+    "_postman_id": "eb300aeb-c2ed-48d6-a411-d2fdae8b0773",
+    "name": "Noha Tuk Tuk",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "4078553"
+  },
+  "item": [
+    {
+      "name": "JWT",
+      "item": [
+        {
+          "name": "login",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "email",
+                  "value": "admin@nohatuktuk.com",
+                  "type": "text"
+                },
+                {
+                  "key": "password",
+                  "value": "negombo@191302",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{host}}/auth/login",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "auth",
+                "login"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "me",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{host}}/auth/me",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "auth",
+                "me"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "logout",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{host}}/auth/logout",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "auth",
+                "logout"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "refresh",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{host}}/auth/refresh",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "auth",
+                "refresh"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "payload",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{host}}/auth/payload",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "auth",
+                "payload"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Vehicle Types",
+      "item": [
+        {
+          "name": "save vehicle type",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "type",
+                  "value": "Bike",
+                  "type": "text"
+                },
+                {
+                  "key": "vehicle_fee",
+                  "value": "300",
+                  "type": "text"
+                },
+                {
+                  "key": "no_of_seats",
+                  "value": "5",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{host}}/vehicle-type/save-vehicle-type",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "vehicle-type",
+                "save-vehicle-type"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update vehicle type",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "vehicle_type_id",
+                  "value": "1",
+                  "type": "text"
+                },
+                {
+                  "key": "type",
+                  "value": "TUK",
+                  "type": "text"
+                },
+                {
+                  "key": "vehicle_fee",
+                  "value": "250",
+                  "type": "text"
+                },
+                {
+                  "key": "no_of_seats",
+                  "value": "3",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{host}}/vehicle-type/update-vehicle-type",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "vehicle-type",
+                "update-vehicle-type"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "remove-vehicle-type",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "vehicle_type_id",
+                  "value": "3",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{host}}/vehicle-type/remove-vehicle-type",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "vehicle-type",
+                "remove-vehicle-type"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get all vehicle types",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "is_active_check",
+                  "value": "1",
+                  "description": "1 active vehicle type only , 0 all vehicall type without checking active status",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{Noha Live}}/vehicle-type/get-all-vehicle-types",
+              "host": [
+                "{{Noha Live}}"
+              ],
+              "path": [
+                "vehicle-type",
+                "get-all-vehicle-types"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "set is actve",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "vehicle_type_id",
+                  "value": "1",
+                  "type": "text"
+                },
+                {
+                  "key": "is_active",
+                  "value": "1",
+                  "description": "1 active. 0 - not active",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{host}}/vehicle-type/set-is-active",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "vehicle-type",
+                "set-is-active"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get vehicle type by id",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "vehicle_type_id",
+                  "value": "122",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{host}}/vehicle-type/get-vehicle-type-by-id",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "vehicle-type",
+                "get-vehicle-type-by-id"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Vehicle Type Fees",
+      "item": [
+        {
+          "name": "save vehicle type fee",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "vehicle_type_id",
+                  "value": "4",
+                  "type": "text"
+                },
+                {
+                  "key": "vehicle_type_fee",
+                  "value": "33",
+                  "type": "text"
+                },
+                {
+                  "key": "no_of_days",
+                  "value": "5",
+                  "type": "text"
+                },
+                {
+                  "key": "airport_service_discount",
+                  "value": "10",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{Noha Test}}/vehicle-type-fee/save-vehicle-type-fee",
+              "host": [
+                "{{Noha Test}}"
+              ],
+              "path": [
+                "vehicle-type-fee",
+                "save-vehicle-type-fee"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update vehicle type fee",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "vehicle_type_fee_id",
+                  "value": "1",
+                  "type": "text"
+                },
+                {
+                  "key": "vehicle_type_id",
+                  "value": "1",
+                  "type": "text"
+                },
+                {
+                  "key": "vehicle_type_fee",
+                  "value": "22",
+                  "type": "text"
+                },
+                {
+                  "key": "no_of_days",
+                  "value": "15",
+                  "type": "text"
+                },
+                {
+                  "key": "airport_service_discount",
+                  "value": "15",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{Noha Test}}/vehicle-type-fee/update-vehicle-type-fee",
+              "host": [
+                "{{Noha Test}}"
+              ],
+              "path": [
+                "vehicle-type-fee",
+                "update-vehicle-type-fee"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "remove vehicle type fee",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "vehicle_type_fee_id",
+                  "value": "3",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{Noha Test}}/vehicle-type-fee/remove-vehicle-type-fee",
+              "host": [
+                "{{Noha Test}}"
+              ],
+              "path": [
+                "vehicle-type-fee",
+                "remove-vehicle-type-fee"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get all vehicle type fees",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "is_active_check",
+                  "value": "0",
+                  "description": "1 active vehicle type only , 0 all vehicall type without checking active status",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{Noha Test}}/vehicle-type-fee/get-all-vehicle-type-fees",
+              "host": [
+                "{{Noha Test}}"
+              ],
+              "path": [
+                "vehicle-type-fee",
+                "get-all-vehicle-type-fees"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "set vehicle type fee is active",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "vehicle_type_fee_id",
+                  "value": "8",
+                  "type": "text"
+                },
+                {
+                  "key": "is_active",
+                  "value": "0",
+                  "description": "1 active. 0 - not active",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{Noha Test}}/vehicle-type-fee/set-vehicle-type-fee-is-active",
+              "host": [
+                "{{Noha Test}}"
+              ],
+              "path": [
+                "vehicle-type-fee",
+                "set-vehicle-type-fee-is-active"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get vehicle type fee by id",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "vehicle_type_fee_id",
+                  "value": "1",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{Noha Test}}/vehicle-type-fee/get-vehicle-type-fee-by-id",
+              "host": [
+                "{{Noha Test}}"
+              ],
+              "path": [
+                "vehicle-type-fee",
+                "get-vehicle-type-fee-by-id"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Pickup Location",
+      "item": [
+        {
+          "name": "save pickup location",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "vehicle_type_id",
+                  "value": "3",
+                  "type": "text"
+                },
+                {
+                  "key": "pickup_location",
+                  "value": "Arugambay",
+                  "type": "text"
+                },
+                {
+                  "key": "fee",
+                  "value": "300",
+                  "type": "text"
+                },
+                {
+                  "key": "airport_service_fee",
+                  "value": "15",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{Noha Test}}/pickup-location/save-pickup-location",
+              "host": [
+                "{{Noha Test}}"
+              ],
+              "path": [
+                "pickup-location",
+                "save-pickup-location"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update pickup location",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "pickup_location_id",
+                  "value": "5",
+                  "type": "text"
+                },
+                {
+                  "key": "vehicle_type_id",
+                  "value": "3",
+                  "type": "text"
+                },
+                {
+                  "key": "pickup_location",
+                  "value": "Colombo",
+                  "type": "text"
+                },
+                {
+                  "key": "fee",
+                  "value": "300",
+                  "type": "text"
+                },
+                {
+                  "key": "airport_service_fee",
+                  "value": "25",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{Noha Test}}/pickup-location/update-pickup-location",
+              "host": [
+                "{{Noha Test}}"
+              ],
+              "path": [
+                "pickup-location",
+                "update-pickup-location"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "remove-pickup-location",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "pickup_location_id",
+                  "value": "3",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{Noha Test}}/pickup-location/remove-pickup-location",
+              "host": [
+                "{{Noha Test}}"
+              ],
+              "path": [
+                "pickup-location",
+                "remove-pickup-location"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get all pickup location",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "is_active_check",
+                  "value": "0",
+                  "description": "1 active pickup location only, 0 all",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{Noha Test}}/pickup-location/get-all-pickup-location",
+              "host": [
+                "{{Noha Test}}"
+              ],
+              "path": [
+                "pickup-location",
+                "get-all-pickup-location"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "set is active",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{Noha Test}}/pickup-location/set-is-active?pickup_location_id=1&is_active=1",
+              "host": [
+                "{{Noha Test}}"
+              ],
+              "path": [
+                "pickup-location",
+                "set-is-active"
+              ],
+              "query": [
+                {
+                  "key": "pickup_location_id",
+                  "value": "1"
+                },
+                {
+                  "key": "is_active",
+                  "value": "1",
+                  "description": "1 active. 0 - not active"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get pickup location by id",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "pickup_location_id",
+                  "value": "1",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{Noha Test}}/pickup-location/get-pickup-location-by-id",
+              "host": [
+                "{{Noha Test}}"
+              ],
+              "path": [
+                "pickup-location",
+                "get-pickup-location-by-id"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get pickup location by vehicle type",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "vehicle_type_id",
+                  "value": "1",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{Noha Test}}/pickup-location/get-pickup-location-by-vehicle-type",
+              "host": [
+                "{{Noha Test}}"
+              ],
+              "path": [
+                "pickup-location",
+                "get-pickup-location-by-vehicle-type"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Return Location",
+      "item": [
+        {
+          "name": "save return location",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "vehicle_type_id",
+                  "value": "3",
+                  "type": "text"
+                },
+                {
+                  "key": "return_location",
+                  "value": "Gampaha",
+                  "type": "text"
+                },
+                {
+                  "key": "fee",
+                  "value": "300",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{Noha Test}}/return-location/save-return-location",
+              "host": [
+                "{{Noha Test}}"
+              ],
+              "path": [
+                "return-location",
+                "save-return-location"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update return location",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "return_location_id",
+                  "value": "4",
+                  "type": "text"
+                },
+                {
+                  "key": "vehicle_type_id",
+                  "value": "3",
+                  "type": "text"
+                },
+                {
+                  "key": "return_location",
+                  "value": "Negambo",
+                  "type": "text"
+                },
+                {
+                  "key": "fee",
+                  "value": "400",
+                  "type": "text"
+                },
+                {
+                  "key": "airport_service_fee",
+                  "value": "12",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{Noha Test}}/return-location/update-return-location",
+              "host": [
+                "{{Noha Test}}"
+              ],
+              "path": [
+                "return-location",
+                "update-return-location"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "remove return location",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "return_location_id",
+                  "value": "2",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{Noha Test}}/return-location/remove-return-location",
+              "host": [
+                "{{Noha Test}}"
+              ],
+              "path": [
+                "return-location",
+                "remove-return-location"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get all return location",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "is_active_check",
+                  "value": "0",
+                  "description": "1 active only, 0 all",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{Noha Test}}/return-location/get-all-return-location",
+              "host": [
+                "{{Noha Test}}"
+              ],
+              "path": [
+                "return-location",
+                "get-all-return-location"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "set is active",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "return_location_id",
+                  "value": "1",
+                  "type": "text"
+                },
+                {
+                  "key": "is_active",
+                  "value": "1",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{Noha Test}}/return-location/set-is-active",
+              "host": [
+                "{{Noha Test}}"
+              ],
+              "path": [
+                "return-location",
+                "set-is-active"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get-return-location-id",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "return_location_id",
+                  "value": "1",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{Noha Test}}/return-location/get-return-location-id",
+              "host": [
+                "{{Noha Test}}"
+              ],
+              "path": [
+                "return-location",
+                "get-return-location-id"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get return location by vehicle type",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "vehicle_type_id",
+                  "value": "1",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{Noha Test}}/return-location/get-return-location-by-vehicle-type",
+              "host": [
+                "{{Noha Test}}"
+              ],
+              "path": [
+                "return-location",
+                "get-return-location-by-vehicle-type"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Service Charge",
+      "item": [
+        {
+          "name": "save service chargers",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "vehicle_type_id",
+                  "value": "10",
+                  "type": "text"
+                },
+                {
+                  "key": "security_deposit",
+                  "value": "150",
+                  "type": "text"
+                },
+                {
+                  "key": "driving_license_fee",
+                  "value": "200",
+                  "type": "text"
+                },
+                {
+                  "key": "driving_license_days",
+                  "value": "5",
+                  "type": "text"
+                },
+                {
+                  "key": "insurance_fee",
+                  "value": "100",
+                  "type": "text"
+                },
+                {
+                  "key": "insurance_days",
+                  "value": "10",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{Noha Test}}/service-chargers/save-service-chargers",
+              "host": [
+                "{{Noha Test}}"
+              ],
+              "path": [
+                "service-chargers",
+                "save-service-chargers"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update service chargers",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{Noha Test}}/service-chargers/update-service-chargers?service_charge_id=1&vehicle_type_id=1&security_deposit=100&driving_license_fee=150&driving_license_days=5&insurance_fee=120&insurance_days=5",
+              "host": [
+                "{{Noha Test}}"
+              ],
+              "path": [
+                "service-chargers",
+                "update-service-chargers"
+              ],
+              "query": [
+                {
+                  "key": "service_charge_id",
+                  "value": "1"
+                },
+                {
+                  "key": "vehicle_type_id",
+                  "value": "1"
+                },
+                {
+                  "key": "security_deposit",
+                  "value": "100"
+                },
+                {
+                  "key": "driving_license_fee",
+                  "value": "150"
+                },
+                {
+                  "key": "driving_license_days",
+                  "value": "5"
+                },
+                {
+                  "key": "insurance_fee",
+                  "value": "120"
+                },
+                {
+                  "key": "insurance_days",
+                  "value": "5"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "remove service chargers",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "service_charge_id",
+                  "value": "1",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{host}}/service-chargers/remove-service-chargers",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "service-chargers",
+                "remove-service-chargers"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get all service chargers",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "is_active_check",
+                  "value": "0",
+                  "description": "1 active, 0 all",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{Noha Test}}/service-chargers/get-all-service-chargers",
+              "host": [
+                "{{Noha Test}}"
+              ],
+              "path": [
+                "service-chargers",
+                "get-all-service-chargers"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "set is active",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{host}}/service-chargers/set-is-active?service_charge_id=1&is_active=0",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "service-chargers",
+                "set-is-active"
+              ],
+              "query": [
+                {
+                  "key": "service_charge_id",
+                  "value": "1"
+                },
+                {
+                  "key": "is_active",
+                  "value": "0"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get service charge by id",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "service_charge_id",
+                  "value": "1",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{host}}/service-chargers/get-service-charge-by-id",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "service-chargers",
+                "get-service-charge-by-id"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Extra Service",
+      "item": [
+        {
+          "name": "save-extra-service",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "vehicle_type_id",
+                  "value": "8",
+                  "type": "text"
+                },
+                {
+                  "key": "service",
+                  "value": "Kandy to Ellaa",
+                  "type": "text"
+                },
+                {
+                  "key": "fee",
+                  "value": "45",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{Noha Test}}/extra-service/save-extra-service",
+              "host": [
+                "{{Noha Test}}"
+              ],
+              "path": [
+                "extra-service",
+                "save-extra-service"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update extra service",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "extra_service_id",
+                  "value": "1",
+                  "type": "text"
+                },
+                {
+                  "key": "vehicle_type_id",
+                  "value": "1",
+                  "type": "text"
+                },
+                {
+                  "key": "service",
+                  "value": "Kandy to Ella",
+                  "type": "text"
+                },
+                {
+                  "key": "fee",
+                  "value": "50",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{Noha Test}}/extra-service/update-extra-service",
+              "host": [
+                "{{Noha Test}}"
+              ],
+              "path": [
+                "extra-service",
+                "update-extra-service"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "remove extra service",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "extra_service_id",
+                  "value": "1",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{host}}/extra-service/remove-extra-service",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "extra-service",
+                "remove-extra-service"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get-all-extra-service",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "is_active_check",
+                  "value": "1",
+                  "description": "1 active, 0 all",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{Noha Test}}/extra-service/get-all-extra-service",
+              "host": [
+                "{{Noha Test}}"
+              ],
+              "path": [
+                "extra-service",
+                "get-all-extra-service"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "set is active",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{host}}/extra-service/set-is-active?extra_service_id=1&is_active=1",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "extra-service",
+                "set-is-active"
+              ],
+              "query": [
+                {
+                  "key": "extra_service_id",
+                  "value": "1"
+                },
+                {
+                  "key": "is_active",
+                  "value": "1"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get extra service by id",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "extra_service_id",
+                  "value": "1",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{host}}/extra-service/get-extra-service-by-id",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "extra-service",
+                "get-extra-service-by-id"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Vehicle Owner",
+      "item": [
+        {
+          "name": "save vehicle owner",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "first_name",
+                  "value": "Chamara",
+                  "type": "text"
+                },
+                {
+                  "key": "last_name",
+                  "value": "Perera",
+                  "type": "text"
+                },
+                {
+                  "key": "nic",
+                  "value": "882955000v",
+                  "type": "text"
+                },
+                {
+                  "key": "driving_license_no",
+                  "value": "4454545",
+                  "type": "text"
+                },
+                {
+                  "key": "address_line_1",
+                  "value": "188/2",
+                  "type": "text"
+                },
+                {
+                  "key": "address_line_2",
+                  "value": "Nawala Road",
+                  "type": "text"
+                },
+                {
+                  "key": "city",
+                  "value": "Rajagiriya",
+                  "type": "text"
+                },
+                {
+                  "key": "mobile_1_country_code",
+                  "value": "+94",
+                  "type": "text"
+                },
+                {
+                  "key": "mobile_1",
+                  "value": "0767443443",
+                  "type": "text"
+                },
+                {
+                  "key": "mobile_2_country_code",
+                  "value": "+94",
+                  "type": "text"
+                },
+                {
+                  "key": "mobile_2",
+                  "value": "0767443443",
+                  "type": "text"
+                },
+                {
+                  "key": "email",
+                  "value": "chamara@gmail.com",
+                  "type": "text"
+                },
+                {
+                  "key": "country_code",
+                  "value": "lk",
+                  "type": "text"
+                },
+                {
+                  "key": "account_no",
+                  "value": "121545",
+                  "type": "text"
+                },
+                {
+                  "key": "account_name",
+                  "value": "Saman",
+                  "type": "text"
+                },
+                {
+                  "key": "bank",
+                  "value": "1",
+                  "type": "text"
+                },
+                {
+                  "key": "branch",
+                  "value": "Rajagiriya",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{host}}/vehicle-owner/save-vehicle-owner",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "vehicle-owner",
+                "save-vehicle-owner"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update vehicle owner",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "vehicle_owner_id",
+                  "value": "2",
+                  "type": "text"
+                },
+                {
+                  "key": "first_name",
+                  "value": "Malinda",
+                  "type": "text"
+                },
+                {
+                  "key": "last_name",
+                  "value": "Jayawardana",
+                  "type": "text"
+                },
+                {
+                  "key": "nic",
+                  "value": "882891006v",
+                  "type": "text"
+                },
+                {
+                  "key": "driving_license_no",
+                  "value": "252555",
+                  "type": "text"
+                },
+                {
+                  "key": "address_line_1",
+                  "value": "1887/1",
+                  "type": "text"
+                },
+                {
+                  "key": "address_line_2",
+                  "value": "Rajagiriya Road",
+                  "type": "text"
+                },
+                {
+                  "key": "city",
+                  "value": "Nawala",
+                  "type": "text"
+                },
+                {
+                  "key": "mobile_1_country_code",
+                  "value": "+94",
+                  "type": "text"
+                },
+                {
+                  "key": "mobile_1",
+                  "value": "0767443443",
+                  "type": "text"
+                },
+                {
+                  "key": "mobile_2_country_code",
+                  "value": "+94",
+                  "type": "text"
+                },
+                {
+                  "key": "mobile_2",
+                  "value": "0767443442",
+                  "type": "text"
+                },
+                {
+                  "key": "email",
+                  "value": "malinda@gmail.com",
+                  "type": "text"
+                },
+                {
+                  "key": "country_code",
+                  "value": "lk",
+                  "type": "text"
+                },
+                {
+                  "key": "account_no",
+                  "value": "5544455",
+                  "type": "text"
+                },
+                {
+                  "key": "account_name",
+                  "value": "malinda",
+                  "type": "text"
+                },
+                {
+                  "key": "bank",
+                  "value": "2",
+                  "type": "text"
+                },
+                {
+                  "key": "branch",
+                  "value": "Nawala",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{host}}/vehicle-owner/update-vehicle-owner",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "vehicle-owner",
+                "update-vehicle-owner"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "remove-vehicle-owner",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "vehicle_owner_id",
+                  "value": "2",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{host}}/vehicle-owner/remove-vehicle-owner",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "vehicle-owner",
+                "remove-vehicle-owner"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get vehicle owner details",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "vehicle_type",
+                  "value": "1",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{Noha Test}}/vehicle-owner/get-vehicle-owner-details",
+              "host": [
+                "{{Noha Test}}"
+              ],
+              "path": [
+                "vehicle-owner",
+                "get-vehicle-owner-details"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get all vehicle owner",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "is_active",
+                  "value": "1",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{Noha Test}}/vehicle-owner/get-all-vehicle-owner",
+              "host": [
+                "{{Noha Test}}"
+              ],
+              "path": [
+                "vehicle-owner",
+                "get-all-vehicle-owner"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "set is active",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "vehicle_owner_id",
+                  "value": "2",
+                  "type": "text"
+                },
+                {
+                  "key": "is_active",
+                  "value": "1",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{host}}/vehicle-owner/set-is-active",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "vehicle-owner",
+                "set-is-active"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get vehicle owner by id",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "vehicle_owner_id",
+                  "value": "4",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{host}}/vehicle-owner/get-vehicle-owner-by-id",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "vehicle-owner",
+                "get-vehicle-owner-by-id"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Bank",
+      "item": [
+        {
+          "name": "get all banks",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{host}}/bank/get-all-banks",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "bank",
+                "get-all-banks"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Vehicle",
+      "item": [
+        {
+          "name": "save vehicle",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "vehicle_type_id",
+                  "value": "1",
+                  "type": "text"
+                },
+                {
+                  "key": "vehicle_owner_id",
+                  "value": "2",
+                  "type": "text"
+                },
+                {
+                  "key": "registration_no",
+                  "value": "CBA-2548",
+                  "type": "text"
+                },
+                {
+                  "key": "vehicle_image",
+                  "type": "file",
+                  "src": "/C:/Users/Salinda Kya/Desktop/revq/images/default.jpg"
+                },
+                {
+                  "key": "revenue_license_no",
+                  "value": "3434344",
+                  "type": "text"
+                },
+                {
+                  "key": "revenue_license_exp_date",
+                  "value": "2022-10-22",
+                  "type": "text"
+                },
+                {
+                  "key": "revenue_license_image",
+                  "type": "file",
+                  "src": "/C:/Users/Salinda Kya/Desktop/revq/images/default.jpg"
+                },
+                {
+                  "key": "smoke_test_no",
+                  "value": "25415",
+                  "type": "text"
+                },
+                {
+                  "key": "smoke_test_exp_date",
+                  "value": "2022-10-15",
+                  "type": "text"
+                },
+                {
+                  "key": "smoke_test_image",
+                  "type": "file",
+                  "src": "/C:/Users/Salinda Kya/Desktop/revq/images/default.jpg"
+                },
+                {
+                  "key": "insurance_no",
+                  "value": "25456",
+                  "type": "text"
+                },
+                {
+                  "key": "insurance_exp_date",
+                  "value": "2022-10-23",
+                  "type": "text"
+                },
+                {
+                  "key": "insurance_image",
+                  "type": "file",
+                  "src": "/C:/Users/Salinda Kya/Desktop/revq/images/default.jpg"
+                },
+                {
+                  "key": "per_day_rate",
+                  "value": "200",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{host}}/vehicle/save-vehicle",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "vehicle",
+                "save-vehicle"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update vehicle",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "vehicle_id",
+                  "value": "2",
+                  "type": "text"
+                },
+                {
+                  "key": "vehicle_type_id",
+                  "value": "1",
+                  "type": "text"
+                },
+                {
+                  "key": "vehicle_owner_id",
+                  "value": "2",
+                  "type": "text"
+                },
+                {
+                  "key": "registration_no",
+                  "value": "CBA-2549",
+                  "type": "text"
+                },
+                {
+                  "key": "vehicle_image",
+                  "type": "file",
+                  "src": "/C:/Users/Salinda Kya/Desktop/revq/images/default.jpg"
+                },
+                {
+                  "key": "revenue_license_no",
+                  "value": "3434344",
+                  "type": "text"
+                },
+                {
+                  "key": "revenue_license_exp_date",
+                  "value": "2022-10-22",
+                  "type": "text"
+                },
+                {
+                  "key": "revenue_license_image",
+                  "type": "file",
+                  "src": "/C:/Users/Salinda Kya/Desktop/revq/images/default.jpg"
+                },
+                {
+                  "key": "smoke_test_no",
+                  "value": "25415",
+                  "type": "text"
+                },
+                {
+                  "key": "smoke_test_exp_date",
+                  "value": "2022-10-15",
+                  "type": "text"
+                },
+                {
+                  "key": "smoke_test_image",
+                  "type": "file",
+                  "src": "/C:/Users/Salinda Kya/Desktop/revq/images/default.jpg"
+                },
+                {
+                  "key": "insurance_no",
+                  "value": "25456",
+                  "type": "text"
+                },
+                {
+                  "key": "insurance_exp_date",
+                  "value": "2022-10-23",
+                  "type": "text"
+                },
+                {
+                  "key": "insurance_image",
+                  "type": "file",
+                  "src": "/C:/Users/Salinda Kya/Desktop/revq/images/default.jpg"
+                },
+                {
+                  "key": "per_day_rate",
+                  "value": "200",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{host}}/vehicle/update-vehicle",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "vehicle",
+                "update-vehicle"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "remove vehicle",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "vehicle_id",
+                  "value": "3",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{host}}/vehicle/remove-vehicle",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "vehicle",
+                "remove-vehicle"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get all vehicle",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "is_active_check",
+                  "value": "0",
+                  "description": "1 active, 0 all",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{tuktuk test}}/vehicle/get-all-vehicle",
+              "host": [
+                "{{tuktuk test}}"
+              ],
+              "path": [
+                "vehicle",
+                "get-all-vehicle"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "set is active",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "vehicle_id",
+                  "value": "2",
+                  "type": "text"
+                },
+                {
+                  "key": "is_active",
+                  "value": "1",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{host}}/vehicle/set-is-active",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "vehicle",
+                "set-is-active"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "search-vehicle",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "vehicletype",
+                  "value": "1",
+                  "type": "text"
+                },
+                {
+                  "key": "owner",
+                  "value": "-1",
+                  "type": "text"
+                },
+                {
+                  "key": "regNo",
+                  "value": "-1",
+                  "type": "text"
+                },
+                {
+                  "key": "from_date",
+                  "value": "2024-05-02",
+                  "type": "text"
+                },
+                {
+                  "key": "to_date",
+                  "value": "2024-06-01",
+                  "type": "text"
+                },
+                {
+                  "key": "is_license",
+                  "value": "0",
+                  "type": "text"
+                },
+                {
+                  "key": "is_smoke_test",
+                  "value": "0",
+                  "type": "text"
+                },
+                {
+                  "key": "is_insurance",
+                  "value": "0",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{tuktuk test}}/vehicle/search-vehicle",
+              "host": [
+                "{{tuktuk test}}"
+              ],
+              "path": [
+                "vehicle",
+                "search-vehicle"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Booking",
+      "item": [
+        {
+          "name": "get booking no",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{host}}/booking/get-booking-number",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "booking",
+                "get-booking-number"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "check availability and get reservation details",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "vehicle_type_id",
+                  "value": "1",
+                  "type": "text"
+                },
+                {
+                  "key": "no_of_vehicle",
+                  "value": "1",
+                  "type": "text"
+                },
+                {
+                  "key": "from_date",
+                  "value": "2026-05-20T22:22",
+                  "type": "text"
+                },
+                {
+                  "key": "to_date",
+                  "value": "2026-06-29T00:00",
+                  "type": "text"
+                },
+                {
+                  "key": "no_of_days",
+                  "value": "2",
+                  "type": "text"
+                },
+                {
+                  "key": "pickup_location_id",
+                  "value": "3",
+                  "type": "text"
+                },
+                {
+                  "key": "return_location_id",
+                  "value": "2",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{Noha Live}}/booking/check-availability-and-get-reservation-details",
+              "host": [
+                "{{Noha Live}}"
+              ],
+              "path": [
+                "booking",
+                "check-availability-and-get-reservation-details"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get-rental-details",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "vehicle_type_id",
+                  "value": "1",
+                  "type": "text"
+                },
+                {
+                  "key": "vehicle_type_fee_id",
+                  "value": "1",
+                  "type": "text"
+                },
+                {
+                  "key": "no_of_vehicle",
+                  "value": "2",
+                  "type": "text"
+                },
+                {
+                  "key": "from_date",
+                  "value": "2024-11-20T01:29",
+                  "type": "text"
+                },
+                {
+                  "key": "to_date",
+                  "value": "2024-11-21T00:00",
+                  "type": "text"
+                },
+                {
+                  "key": "no_of_days",
+                  "value": "2",
+                  "type": "text"
+                },
+                {
+                  "key": "pickup_location_id",
+                  "value": "1",
+                  "type": "text"
+                },
+                {
+                  "key": "return_location_id",
+                  "value": "21",
+                  "type": "text"
+                },
+                {
+                  "key": "no_of_license",
+                  "value": "0",
+                  "type": "text"
+                },
+                {
+                  "key": "extra_services",
+                  "value": "[]",
+                  "description": "{\"extra_service_id\":1,\"no_of_service\":1},{\"extra_service_id\":3,\"no_of_service\":1}",
+                  "type": "text"
+                },
+                {
+                  "key": "airport_pickup",
+                  "value": "1",
+                  "type": "text"
+                },
+                {
+                  "key": "airport_dropoff",
+                  "value": "0",
+                  "type": "text"
+                },
+                {
+                  "key": "no_of_Passengers",
+                  "value": "6",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{Noha Test}}/booking/get-rental-details",
+              "host": [
+                "{{Noha Test}}"
+              ],
+              "path": [
+                "booking",
+                "get-rental-details"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "save booking",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "quotation_no",
+                  "value": "QA0002",
+                  "type": "text"
+                },
+                {
+                  "key": "quotation_date",
+                  "value": "2022-09-07 08:00",
+                  "type": "text"
+                },
+                {
+                  "key": "first_name",
+                  "value": "test2",
+                  "type": "text"
+                },
+                {
+                  "key": "Last_name",
+                  "value": "test2",
+                  "type": "text"
+                },
+                {
+                  "key": "passport_no",
+                  "value": "998665520",
+                  "type": "text"
+                },
+                {
+                  "key": "country",
+                  "value": "srilanka",
+                  "type": "text"
+                },
+                {
+                  "key": "country_code",
+                  "value": "94",
+                  "type": "text"
+                },
+                {
+                  "key": "mobile_country_code",
+                  "value": "94",
+                  "type": "text"
+                },
+                {
+                  "key": "mobile_no",
+                  "value": "998765678",
+                  "type": "text"
+                },
+                {
+                  "key": "email",
+                  "value": "test2@gmail.com",
+                  "type": "text"
+                },
+                {
+                  "key": "grand_total",
+                  "value": "123",
+                  "type": "text"
+                },
+                {
+                  "key": "discount",
+                  "value": "0",
+                  "type": "text"
+                },
+                {
+                  "key": "sub_total",
+                  "value": "123",
+                  "type": "text"
+                },
+                {
+                  "key": "quotation_status_id",
+                  "value": "1",
+                  "type": "text"
+                },
+                {
+                  "key": "customizedAdditionalServices",
+                  "value": "{\n  \"customized_additional_services\": [\n    {\n      \"additional_service_id\": 1,\n      \"request_date\": \"2023-12-12\",\n      \"description\": \"test\",\n      \"no_of_services\": 1,\n      \"service_charge\": 10\n    }\n  ]\n}\n",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{host}}/customize-service/save-customized-quotation",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "customize-service",
+                "save-customized-quotation"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update booking",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "booking_id",
+                  "value": "19",
+                  "type": "text"
+                },
+                {
+                  "key": "vehicle_type_id",
+                  "value": "1",
+                  "type": "text"
+                },
+                {
+                  "key": "no_of_vehicle",
+                  "value": "1",
+                  "type": "text"
+                },
+                {
+                  "key": "booking_date",
+                  "value": "2024-08-18T03:49",
+                  "type": "text"
+                },
+                {
+                  "key": "from_date",
+                  "value": "2024-08-23T16:52",
+                  "type": "text"
+                },
+                {
+                  "key": "to_date",
+                  "value": "2024-10-24T00:00",
+                  "type": "text"
+                },
+                {
+                  "key": "no_of_days",
+                  "value": "10",
+                  "type": "text"
+                },
+                {
+                  "key": "pickup_location_id",
+                  "value": "11",
+                  "type": "text"
+                },
+                {
+                  "key": "return_location_id",
+                  "value": "12",
+                  "type": "text"
+                },
+                {
+                  "key": "no_of_License",
+                  "value": "1",
+                  "type": "text"
+                },
+                {
+                  "key": "extra_services",
+                  "value": "[{\"extra_service_id\":\"3\",\"no_of_service\":\"1\",\"extra_service_date\":\"2024-08-24 16:59:00\"}]",
+                  "type": "text"
+                },
+                {
+                  "key": "coupon_code",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "full_name",
+                  "value": "Ayesh t",
+                  "type": "text"
+                },
+                {
+                  "key": "mobile_no",
+                  "value": "7554431615",
+                  "type": "text"
+                },
+                {
+                  "key": "email",
+                  "value": "peterlidle@gmail.com",
+                  "type": "text"
+                },
+                {
+                  "key": "comment",
+                  "value": "Unsure dates kandy Ella transfer",
+                  "type": "text"
+                },
+                {
+                  "key": "extended_date",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "no_of_extended_date",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "country_code",
+                  "value": "es",
+                  "type": "text"
+                },
+                {
+                  "key": "country",
+                  "value": "Spain (España)",
+                  "type": "text"
+                },
+                {
+                  "key": "mobile_country_code",
+                  "value": "+34",
+                  "type": "text"
+                },
+                {
+                  "key": "vehicle_type_fee_id",
+                  "value": "1",
+                  "type": "text"
+                },
+                {
+                  "key": "airport_pickup",
+                  "value": "1",
+                  "type": "text"
+                },
+                {
+                  "key": "airport_dropoff",
+                  "value": "1",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{Noha Test}}/booking/update-booking",
+              "host": [
+                "{{Noha Test}}"
+              ],
+              "path": [
+                "booking",
+                "update-booking"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get booking details by booking id",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "booking_id",
+                  "value": "63",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{Noha Test}}/booking/get-booking-details-by-booking-id",
+              "host": [
+                "{{Noha Test}}"
+              ],
+              "path": [
+                "booking",
+                "get-booking-details-by-booking-id"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get pending bookings",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
+            "url": {
+              "raw": "{{host}}/booking/get-pending-bookings",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "booking",
+                "get-pending-bookings"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "reject booking",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "booking_id",
+                  "value": "9",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{host}}/booking/reject-bookings",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "booking",
+                "reject-bookings"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "confirm-train-service-bookings",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "booking_id",
+                  "value": "9",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{host}}/booking/confirm-bookings",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "booking",
+                "confirm-bookings"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delete booking",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "booking_id",
+                  "value": "170",
+                  "type": "text"
+                },
+                {
+                  "key": "booking_id",
+                  "value": "160",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "booking_id",
+                  "value": "48",
+                  "type": "text",
+                  "disabled": true
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{tuktuk test}}/booking/delete-booking",
+              "host": [
+                "{{tuktuk test}}"
+              ],
+              "path": [
+                "booking",
+                "delete-booking"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get booking No By Vehicle Type",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "vehicle_type_id",
+                  "value": "1",
+                  "type": "text"
+                },
+                {
+                  "key": "mode",
+                  "value": "report",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{tuktuk test}}/booking/get-booking-no-by-vehicle-type",
+              "host": [
+                "{{tuktuk test}}"
+              ],
+              "path": [
+                "booking",
+                "get-booking-no-by-vehicle-type"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get-train-service-status",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{Noha Test}}/booking/get-booking-status",
+              "host": [
+                "{{Noha Test}}"
+              ],
+              "path": [
+                "booking",
+                "get-booking-status"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "search booking",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "vehicle_type_id",
+                  "value": "1",
+                  "type": "text"
+                },
+                {
+                  "key": "booking_no",
+                  "value": "-1",
+                  "description": "when not selecting return -1",
+                  "type": "text"
+                },
+                {
+                  "key": "booking_status_id",
+                  "value": "-1",
+                  "description": "when not selecting return -1",
+                  "type": "text"
+                },
+                {
+                  "key": "from_date",
+                  "value": "2022-07-16",
+                  "type": "text"
+                },
+                {
+                  "key": "to_date",
+                  "value": "2022-07-17",
+                  "type": "text"
+                },
+                {
+                  "key": "is_booking_date",
+                  "value": "0",
+                  "description": "active 1, not active 0",
+                  "type": "text"
+                },
+                {
+                  "key": "is_pickup_date",
+                  "value": "0",
+                  "description": "active 1, not active 0",
+                  "type": "text"
+                },
+                {
+                  "key": "is_return_date",
+                  "value": "1",
+                  "description": "active 1, not active 0",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{host}}/booking/search-booking",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "booking",
+                "search-booking"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "start booking",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "booking_id",
+                  "value": "185",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{tuktuk test}}/booking/start-booking",
+              "host": [
+                "{{tuktuk test}}"
+              ],
+              "path": [
+                "booking",
+                "start-booking"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "end booking",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "booking_id",
+                  "value": "177",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{tuktuk test}}/booking/end-booking",
+              "host": [
+                "{{tuktuk test}}"
+              ],
+              "path": [
+                "booking",
+                "end-booking"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "check booking availability",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "vehicle_type_id",
+                  "value": "1",
+                  "type": "text"
+                },
+                {
+                  "key": "from_date",
+                  "value": "2022-09-01",
+                  "type": "text"
+                },
+                {
+                  "key": "to_date",
+                  "value": "2022-09-02",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{host}}/booking/check-booking-availability",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "booking",
+                "check-booking-availability"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "train-services-booking",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "vehicle_type_id",
+                  "value": "1",
+                  "type": "text"
+                },
+                {
+                  "key": "booking_no",
+                  "value": "-1",
+                  "type": "text"
+                },
+                {
+                  "key": "booking_status_id",
+                  "value": "-1",
+                  "type": "text"
+                },
+                {
+                  "key": "from_date",
+                  "value": "2024-05-01",
+                  "type": "text"
+                },
+                {
+                  "key": "to_date",
+                  "value": "2024-05-01",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{Noha Test}}/booking/train-services-booking",
+              "host": [
+                "{{Noha Test}}"
+              ],
+              "path": [
+                "booking",
+                "train-services-booking"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update train service booking",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "extra_services",
+                  "value": "[{\"id\":3, \"extra_service_date\":\"2025-05-01T19:29\"}]",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{host}}/booking/update-train-service-booking",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "booking",
+                "update-train-service-booking"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "confirm-train-service-bookings",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "train_service_id",
+                  "value": "652",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{tuktuk test}}/booking/confirm-train-service-bookings",
+              "host": [
+                "{{tuktuk test}}"
+              ],
+              "path": [
+                "booking",
+                "confirm-train-service-bookings"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "provide-train-service-booking",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "train_service_id",
+                  "value": "319",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{host}}/booking/provide-train-service-booking",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "booking",
+                "provide-train-service-booking"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "reject-train-service-bookings",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "train_service_id",
+                  "value": "319",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{host}}/booking/reject-train-service-bookings",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "booking",
+                "reject-train-service-bookings"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get-train-service-status",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{host}}/booking/get-train-service-status",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "booking",
+                "get-train-service-status"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "apply-coupon-code",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "coupon_code",
+                  "value": "tc2",
+                  "type": "text"
+                },
+                {
+                  "key": "no_of_license",
+                  "value": "1",
+                  "type": "text"
+                },
+                {
+                  "key": "vehicle_type_id",
+                  "value": "1",
+                  "type": "text"
+                },
+                {
+                  "key": "no_of_vehicle",
+                  "value": "1",
+                  "type": "text"
+                },
+                {
+                  "key": "pickup_location_id",
+                  "value": "3",
+                  "type": "text"
+                },
+                {
+                  "key": "return_location_id",
+                  "value": "2",
+                  "type": "text"
+                },
+                {
+                  "key": "from_date",
+                  "value": "2024-05-02T15:43",
+                  "type": "text"
+                },
+                {
+                  "key": "to_date",
+                  "value": "2024-05-18T00:00",
+                  "type": "text"
+                },
+                {
+                  "key": "no_of_days",
+                  "value": "25",
+                  "type": "text"
+                },
+                {
+                  "key": "extra_services",
+                  "value": "[{\"extra_service_id\":\"7\",\"no_of_service\":\"1\"}]",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{Noha Test}}/booking/apply-coupon-code",
+              "host": [
+                "{{Noha Test}}"
+              ],
+              "path": [
+                "booking",
+                "apply-coupon-code"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "savebooking",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "vehicle_owner_id",
+                  "value": "2",
+                  "type": "text"
+                },
+                {
+                  "key": "first_name",
+                  "value": "Malinda",
+                  "type": "text"
+                },
+                {
+                  "key": "last_name",
+                  "value": "Jayawardana",
+                  "type": "text"
+                },
+                {
+                  "key": "nic",
+                  "value": "882891006v",
+                  "type": "text"
+                },
+                {
+                  "key": "driving_license_no",
+                  "value": "252555",
+                  "type": "text"
+                },
+                {
+                  "key": "address_line_1",
+                  "value": "1887/1",
+                  "type": "text"
+                },
+                {
+                  "key": "address_line_2",
+                  "value": "Rajagiriya Road",
+                  "type": "text"
+                },
+                {
+                  "key": "city",
+                  "value": "Nawala",
+                  "type": "text"
+                },
+                {
+                  "key": "mobile_1_country_code",
+                  "value": "+94",
+                  "type": "text"
+                },
+                {
+                  "key": "mobile_1",
+                  "value": "0767443443",
+                  "type": "text"
+                },
+                {
+                  "key": "mobile_2_country_code",
+                  "value": "+94",
+                  "type": "text"
+                },
+                {
+                  "key": "mobile_2",
+                  "value": "0767443442",
+                  "type": "text"
+                },
+                {
+                  "key": "email",
+                  "value": "malinda@gmail.com",
+                  "type": "text"
+                },
+                {
+                  "key": "country_code",
+                  "value": "lk",
+                  "type": "text"
+                },
+                {
+                  "key": "account_no",
+                  "value": "5544455",
+                  "type": "text"
+                },
+                {
+                  "key": "account_name",
+                  "value": "malinda",
+                  "type": "text"
+                },
+                {
+                  "key": "bank",
+                  "value": "2",
+                  "type": "text"
+                },
+                {
+                  "key": "branch",
+                  "value": "Nawala",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{host}}/booking/save-booking",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "booking",
+                "save-booking"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Agreement",
+      "item": [
+        {
+          "name": "get booking numbers",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
+            "url": {
+              "raw": "{{tuktuk test}}/agreement/get-booking-numbers",
+              "host": [
+                "{{tuktuk test}}"
+              ],
+              "path": [
+                "agreement",
+                "get-booking-numbers"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get-agreement-numbers",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{host}}/agreement/get-agreement-numbers?mode=view",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "agreement",
+                "get-agreement-numbers"
+              ],
+              "query": [
+                {
+                  "key": "mode",
+                  "value": "view"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get agreement numbers by booking id",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "booking_id",
+                  "value": "185",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{tuktuk test}}/agreement/get-agreement-numbers-by-booking-id",
+              "host": [
+                "{{tuktuk test}}"
+              ],
+              "path": [
+                "agreement",
+                "get-agreement-numbers-by-booking-id"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get vehicle registration numbers by vehicle type",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "vehicle_type_id",
+                  "value": "1",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{host}}/agreement/get-vehicle-registration-number-by-vehicle-type",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "agreement",
+                "get-vehicle-registration-number-by-vehicle-type"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "create agreement",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "booking_id",
+                  "value": "9",
+                  "type": "text"
+                },
+                {
+                  "key": "agreement_date",
+                  "value": "2022-08-27 10:30:00",
+                  "type": "text"
+                },
+                {
+                  "key": "first_name",
+                  "value": "Salinda",
+                  "type": "text"
+                },
+                {
+                  "key": "last_name",
+                  "value": "Jayawardana",
+                  "type": "text"
+                },
+                {
+                  "key": "date_of_birth",
+                  "value": "1988-10-21",
+                  "type": "text"
+                },
+                {
+                  "key": "age",
+                  "value": "34",
+                  "type": "text"
+                },
+                {
+                  "key": "nationality",
+                  "value": "SriLankan",
+                  "type": "text"
+                },
+                {
+                  "key": "passport_no",
+                  "value": "12155154545",
+                  "type": "text"
+                },
+                {
+                  "key": "visa_expiry_date",
+                  "value": "2025-12-30",
+                  "type": "text"
+                },
+                {
+                  "key": "country_code",
+                  "value": "lk",
+                  "type": "text"
+                },
+                {
+                  "key": "mobile_1_country_code",
+                  "value": "+94",
+                  "type": "text"
+                },
+                {
+                  "key": "mobile_1",
+                  "value": "767443443",
+                  "type": "text"
+                },
+                {
+                  "key": "mobile_2_country_code",
+                  "value": "+94",
+                  "type": "text"
+                },
+                {
+                  "key": "mobile_2",
+                  "value": "767442442",
+                  "type": "text"
+                },
+                {
+                  "key": "email",
+                  "value": "salinda@gmail.com",
+                  "type": "text"
+                },
+                {
+                  "key": "address_in_srilanka",
+                  "value": "188/2 Nawala Road Rajagiriya",
+                  "type": "text"
+                },
+                {
+                  "key": "permanent_address",
+                  "value": "188/2 Nawala Road Rajagiriya",
+                  "type": "text"
+                },
+                {
+                  "key": "flight_number",
+                  "value": "121545",
+                  "type": "text"
+                },
+                {
+                  "key": "departure_loation",
+                  "value": "India",
+                  "type": "text"
+                },
+                {
+                  "key": "departure_date",
+                  "value": "2022-08-25",
+                  "type": "text"
+                },
+                {
+                  "key": "departure_time",
+                  "value": "20:30:00",
+                  "type": "text"
+                },
+                {
+                  "key": "vehicle_type_id",
+                  "value": "1",
+                  "type": "text"
+                },
+                {
+                  "key": "from_date",
+                  "value": "2022-08-25 10:30:00",
+                  "type": "text"
+                },
+                {
+                  "key": "to_date",
+                  "value": "2022-09-26 10:30:00",
+                  "type": "text"
+                },
+                {
+                  "key": "vehicle_id",
+                  "value": "2",
+                  "type": "text"
+                },
+                {
+                  "key": "license_no",
+                  "value": "45555455",
+                  "type": "text"
+                },
+                {
+                  "key": "milage_starts",
+                  "value": "10000",
+                  "type": "text"
+                },
+                {
+                  "key": "milage_ends",
+                  "value": "10100",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{tuktuk test}}/agreement/create-agreement",
+              "host": [
+                "{{tuktuk test}}"
+              ],
+              "path": [
+                "agreement",
+                "create-agreement"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update agreement",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "agreement_id",
+                  "value": "114",
+                  "type": "text"
+                },
+                {
+                  "key": "booking_id",
+                  "value": "192",
+                  "type": "text"
+                },
+                {
+                  "key": "agreement_date",
+                  "value": "2024-05-04 03:23:21",
+                  "type": "text"
+                },
+                {
+                  "key": "first_name",
+                  "value": "Indumini",
+                  "type": "text"
+                },
+                {
+                  "key": "last_name",
+                  "value": "Munasinghe",
+                  "type": "text"
+                },
+                {
+                  "key": "date_of_birth",
+                  "value": "1988-10-21",
+                  "type": "text"
+                },
+                {
+                  "key": "age",
+                  "value": "40",
+                  "type": "text"
+                },
+                {
+                  "key": "nationality",
+                  "value": "SriLankan",
+                  "type": "text"
+                },
+                {
+                  "key": "passport_no",
+                  "value": "12155154545",
+                  "type": "text"
+                },
+                {
+                  "key": "visa_expiry_date",
+                  "value": "2025-12-30",
+                  "type": "text"
+                },
+                {
+                  "key": "country_code",
+                  "value": "lk",
+                  "type": "text"
+                },
+                {
+                  "key": "mobile_1_country_code",
+                  "value": "+94",
+                  "type": "text"
+                },
+                {
+                  "key": "mobile_1",
+                  "value": "767443443",
+                  "type": "text"
+                },
+                {
+                  "key": "mobile_2_country_code",
+                  "value": "+94",
+                  "type": "text"
+                },
+                {
+                  "key": "mobile_2",
+                  "value": "767442442",
+                  "type": "text"
+                },
+                {
+                  "key": "email",
+                  "value": "test@gmail.com",
+                  "type": "text"
+                },
+                {
+                  "key": "address_in_srilanka",
+                  "value": "188/2 Nawala Road Rajagiriya",
+                  "type": "text"
+                },
+                {
+                  "key": "permanent_address",
+                  "value": "188/2 Nawala Road Rajagiriya",
+                  "type": "text"
+                },
+                {
+                  "key": "flight_number",
+                  "value": "121545",
+                  "type": "text"
+                },
+                {
+                  "key": "departure_loation",
+                  "value": "India",
+                  "type": "text"
+                },
+                {
+                  "key": "departure_date",
+                  "value": "2022-08-25",
+                  "type": "text"
+                },
+                {
+                  "key": "departure_time",
+                  "value": "20:30:00",
+                  "type": "text"
+                },
+                {
+                  "key": "vehicle_type_id",
+                  "value": "1",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "from_date",
+                  "value": "2022-08-25 10:30:00",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "to_date",
+                  "value": "2022-08-26 10:30:00",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "vehicle_id",
+                  "value": "2",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "license_no",
+                  "value": "45555455",
+                  "type": "text"
+                },
+                {
+                  "key": "milage_starts",
+                  "value": "1004",
+                  "type": "text"
+                },
+                {
+                  "key": "milage_ends",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "agreement_vehicle_id",
+                  "value": "178",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{tuktuk test}}/agreement/update-agreement",
+              "host": [
+                "{{tuktuk test}}"
+              ],
+              "path": [
+                "agreement",
+                "update-agreement"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "search agreement",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "booking_id",
+                  "value": "9",
+                  "description": "when not selecting return -1",
+                  "type": "text"
+                },
+                {
+                  "key": "agreement_id",
+                  "value": "12",
+                  "description": "when not selecting return -1",
+                  "type": "text"
+                },
+                {
+                  "key": "from_date",
+                  "value": "2022-08-01",
+                  "type": "text"
+                },
+                {
+                  "key": "to_date",
+                  "value": "2022-10-30",
+                  "type": "text"
+                },
+                {
+                  "key": "is_pickup_date",
+                  "value": "1",
+                  "description": "active 1, not active 0",
+                  "type": "text"
+                },
+                {
+                  "key": "is_return_date",
+                  "value": "1",
+                  "description": "active 1, not active 0",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{tuktuk test}}/agreement/search-agreement",
+              "host": [
+                "{{tuktuk test}}"
+              ],
+              "path": [
+                "agreement",
+                "search-agreement"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get all agreement",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "mode",
+                  "value": "create",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{tuktuk test}}/agreement/get-all-agreement",
+              "host": [
+                "{{tuktuk test}}"
+              ],
+              "path": [
+                "agreement",
+                "get-all-agreement"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get agreement by agreement id",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "agreement_vehicle_id",
+                  "value": "1",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{Noha Test}}/agreement/get-agreement-by-agreement-id",
+              "host": [
+                "{{Noha Test}}"
+              ],
+              "path": [
+                "agreement",
+                "get-agreement-by-agreement-id"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "end agreement",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "agreement_vehicle_id",
+                  "value": "41",
+                  "type": "text"
+                },
+                {
+                  "key": "agreement_end_at",
+                  "value": "2024-04-05",
+                  "type": "text"
+                },
+                {
+                  "key": "milage_ends",
+                  "value": "100",
+                  "type": "text"
+                },
+                {
+                  "key": "new_vehicle_id",
+                  "value": "7",
+                  "type": "text"
+                },
+                {
+                  "key": "new_from_date",
+                  "value": "2024-04-05",
+                  "type": "text"
+                },
+                {
+                  "key": "to_date",
+                  "value": "2024-04-10 20:13:00",
+                  "type": "text"
+                },
+                {
+                  "key": "new_milage_starts",
+                  "value": "500",
+                  "type": "text"
+                },
+                {
+                  "key": "is_switch",
+                  "value": "1",
+                  "type": "text"
+                },
+                {
+                  "key": "comment",
+                  "value": "Test",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{tuktuk test}}/agreement/end-agreement",
+              "host": [
+                "{{tuktuk test}}"
+              ],
+              "path": [
+                "agreement",
+                "end-agreement"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delete agreement",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "agreement_id",
+                  "value": "12",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{host}}/agreement/delete-agreement",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "agreement",
+                "delete-agreement"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Payments",
+      "item": [
+        {
+          "name": "Customer Invoice",
+          "item": [
+            {
+              "name": "get customer invoice numbers",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": []
+                },
+                "url": {
+                  "raw": "{{host}}/payments/get-customer-invoice-numbers",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "payments",
+                    "get-customer-invoice-numbers"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "get booking number by invoice id",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "invoice_id",
+                      "value": "192",
+                      "type": "text"
+                    }
+                  ]
+                },
+                "url": {
+                  "raw": "{{Noha Test}}/payments/get-booking-number-by-invoice-id",
+                  "host": [
+                    "{{Noha Test}}"
+                  ],
+                  "path": [
+                    "payments",
+                    "get-booking-number-by-invoice-id"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "get all end bookings",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "{{host}}/payments/get-all-end-bookings",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "payments",
+                    "get-all-end-bookings"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "customer invoice search",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "invoice_id",
+                      "value": "-1",
+                      "description": "when not selecting return -1",
+                      "type": "text"
+                    },
+                    {
+                      "key": "booking_id",
+                      "value": "-1",
+                      "description": "when not selecting return -1",
+                      "type": "text"
+                    },
+                    {
+                      "key": "invoice_status",
+                      "value": "-1",
+                      "description": "0 not paid, 1 paid,  -1 both",
+                      "type": "text"
+                    },
+                    {
+                      "key": "from_date",
+                      "value": "2024-08-01",
+                      "description": "when not selecting return -1",
+                      "type": "text"
+                    },
+                    {
+                      "key": "to_date",
+                      "value": "2024-08-31",
+                      "description": "when not selecting return -1",
+                      "type": "text"
+                    }
+                  ]
+                },
+                "url": {
+                  "raw": "{{Noha Test}}/payments/customer-invoice-search",
+                  "host": [
+                    "{{Noha Test}}"
+                  ],
+                  "path": [
+                    "payments",
+                    "customer-invoice-search"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "get customer invoice details by invoice id",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "invoice_id",
+                      "value": "192",
+                      "type": "text"
+                    }
+                  ]
+                },
+                "url": {
+                  "raw": "{{Noha Test}}/payments/get-customer-invoice-details-by-invoice-id",
+                  "host": [
+                    "{{Noha Test}}"
+                  ],
+                  "path": [
+                    "payments",
+                    "get-customer-invoice-details-by-invoice-id"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "set customer invoice paid",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "invoice_id",
+                      "value": "1",
+                      "type": "text"
+                    }
+                  ]
+                },
+                "url": {
+                  "raw": "{{host}}/payments/set-customer-invoice-paid",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "payments",
+                    "set-customer-invoice-paid"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "customer-invoice-cancel",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "invoice_id",
+                      "value": "1",
+                      "type": "text"
+                    }
+                  ]
+                },
+                "url": {
+                  "raw": "{{host}}/payments/customer-invoice-cancel",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "payments",
+                    "customer-invoice-cancel"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "customer invoice refund",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "{{host}}/payments/customer-invoice-refund?invoice_id=1",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "payments",
+                    "customer-invoice-refund"
+                  ],
+                  "query": [
+                    {
+                      "key": "invoice_id",
+                      "value": "1"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "Vehicle Owner Invoice",
+          "item": [
+            {
+              "name": "search vehicle owner invoice",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "invoice_id",
+                      "value": "-1",
+                      "description": "when not selecting return -1",
+                      "type": "text"
+                    },
+                    {
+                      "key": "booking_id",
+                      "value": "-1",
+                      "description": "when not selecting return -1",
+                      "type": "text"
+                    },
+                    {
+                      "key": "agreement_id",
+                      "value": "-1",
+                      "description": "when not selecting return -1",
+                      "type": "text"
+                    },
+                    {
+                      "key": "invoice_status",
+                      "value": "-1",
+                      "description": "0 not paid, 1 paid,  -1 both",
+                      "type": "text"
+                    },
+                    {
+                      "key": "from_date",
+                      "value": "-1",
+                      "description": "when not selecting return -1",
+                      "type": "text"
+                    },
+                    {
+                      "key": "to_date",
+                      "value": "-1",
+                      "description": "when not selecting return -1",
+                      "type": "text"
+                    }
+                  ]
+                },
+                "url": {
+                  "raw": "{{Noha Live}}/payments-vehicle-owner/search-vehicle-owner-invoice",
+                  "host": [
+                    "{{Noha Live}}"
+                  ],
+                  "path": [
+                    "payments-vehicle-owner",
+                    "search-vehicle-owner-invoice"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "get invoice details by id",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "invoice_id",
+                      "value": "2",
+                      "type": "text"
+                    }
+                  ]
+                },
+                "url": {
+                  "raw": "{{Noha Test}}/payments-vehicle-owner/get-invoice-details-by-id",
+                  "host": [
+                    "{{Noha Test}}"
+                  ],
+                  "path": [
+                    "payments-vehicle-owner",
+                    "get-invoice-details-by-id"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "get vehicle owner invoice numbers",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "{{host}}/payments-vehicle-owner/get-vehicle-owner-invoice-numbers",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "payments-vehicle-owner",
+                    "get-vehicle-owner-invoice-numbers"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "get booking numbers by vehicle owner invoice id",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "invoice_id",
+                      "value": "2",
+                      "type": "text"
+                    }
+                  ]
+                },
+                "url": {
+                  "raw": "{{host}}/payments-vehicle-owner/get-booking-numbers-by-vehicle-owner-invoice-id",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "payments-vehicle-owner",
+                    "get-booking-numbers-by-vehicle-owner-invoice-id"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "get agreement numbers by booking id",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "booking_id",
+                      "value": "9",
+                      "type": "text"
+                    }
+                  ]
+                },
+                "url": {
+                  "raw": "{{host}}/payments-vehicle-owner/get-agreement-numbers-by-booking-id",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "payments-vehicle-owner",
+                    "get-agreement-numbers-by-booking-id"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "set vehicle owner invoice paid",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "invoice_id",
+                      "value": "2",
+                      "type": "text"
+                    }
+                  ]
+                },
+                "url": {
+                  "raw": "{{host}}/payments-vehicle-owner/set-vehicle-owner-invoice-paid",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "payments-vehicle-owner",
+                    "set-vehicle-owner-invoice-paid"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "vehicle owner invoice cancel",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "invoice_id",
+                      "value": "2",
+                      "type": "text"
+                    }
+                  ]
+                },
+                "url": {
+                  "raw": "{{host}}/payments-vehicle-owner/vehicle-owner-invoice-cancel",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "payments-vehicle-owner",
+                    "vehicle-owner-invoice-cancel"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "vehicle owner invoice refund",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "invoice_id",
+                      "value": "2",
+                      "type": "text"
+                    }
+                  ]
+                },
+                "url": {
+                  "raw": "{{host}}/payments-vehicle-owner/vehicle-owner-invoice-refund",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "payments-vehicle-owner",
+                    "vehicle-owner-invoice-refund"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "Customer Services Invoice",
+          "item": [
+            {
+              "name": "save-customized-service-invoice",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "customized_quotation_id",
+                      "value": "35",
+                      "type": "text",
+                      "uuid": "317f2251-bf64-411a-bc85-00e598f9098c"
+                    },
+                    {
+                      "key": "invoice_date",
+                      "value": "2025-08-21 01:22",
+                      "type": "text"
+                    },
+                    {
+                      "key": "due_date",
+                      "value": "2025-08-21 01:22",
+                      "type": "text"
+                    },
+                    {
+                      "key": "sub_total",
+                      "value": "40.00",
+                      "type": "text"
+                    },
+                    {
+                      "key": "discount",
+                      "value": "0",
+                      "type": "text"
+                    },
+                    {
+                      "key": "grand_total",
+                      "value": "40",
+                      "type": "text"
+                    },
+                    {
+                      "key": "notes",
+                      "value": "gdg",
+                      "type": "text",
+                      "uuid": "464c9f66-152b-41a0-bae2-b024794f9467"
+                    },
+                    {
+                      "key": "payment_method",
+                      "value": "CASH",
+                      "type": "text",
+                      "uuid": "30806828-d035-41b9-8b4c-329d9d87f573"
+                    },
+                    {
+                      "key": "payment_amount",
+                      "value": "40",
+                      "type": "text"
+                    },
+                    {
+                      "key": "reference_no",
+                      "value": "23123",
+                      "type": "text",
+                      "uuid": "51b7b911-bb85-456e-b8b2-54cf20299dc3"
+                    },
+                    {
+                      "key": "remark",
+                      "value": "sfssdff",
+                      "type": "text",
+                      "uuid": "28619c91-c92e-4b72-9fbb-56e821f49b50"
+                    }
+                  ]
+                },
+                "url": {
+                  "raw": "{{Noha Test}}/customize-service/save-customized-service-invoice",
+                  "host": [
+                    "{{Noha Test}}"
+                  ],
+                  "path": [
+                    "customize-service",
+                    "save-customized-service-invoice"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "get-customized-service-invoice-by-id",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "invoice_id",
+                      "value": "10",
+                      "type": "text"
+                    }
+                  ]
+                },
+                "url": {
+                  "raw": "{{Noha Test}}/customize-service/get-customized-invoice-details-by-invoice-id",
+                  "host": [
+                    "{{Noha Test}}"
+                  ],
+                  "path": [
+                    "customize-service",
+                    "get-customized-invoice-details-by-invoice-id"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "search-customized-service-invoices",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": []
+                },
+                "url": {
+                  "raw": "{{Noha Test}}/customize-service/get-customized-quotation",
+                  "host": [
+                    "{{Noha Test}}"
+                  ],
+                  "path": [
+                    "customize-service",
+                    "get-customized-quotation"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Coupons",
+      "item": [
+        {
+          "name": "save coupons",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "vehicle_type_id",
+                  "value": "4",
+                  "type": "text"
+                },
+                {
+                  "key": "coupon_name",
+                  "value": "Christmas",
+                  "type": "text"
+                },
+                {
+                  "key": "coupon_code",
+                  "value": "xmas",
+                  "type": "text"
+                },
+                {
+                  "key": "from_date",
+                  "value": "2022-09-20",
+                  "type": "text"
+                },
+                {
+                  "key": "to_date",
+                  "value": "2022-09-30",
+                  "type": "text"
+                },
+                {
+                  "key": "discount_type",
+                  "value": "1",
+                  "description": "1 discount value, 2 discount percentage",
+                  "type": "text"
+                },
+                {
+                  "key": "discount",
+                  "value": "200",
+                  "type": "text"
+                },
+                {
+                  "key": "minimum_amount",
+                  "value": "1000",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{Noha Test}}/coupons/save-coupons",
+              "host": [
+                "{{Noha Test}}"
+              ],
+              "path": [
+                "coupons",
+                "save-coupons"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update coupons",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "coupon_id",
+                  "value": "1",
+                  "type": "text"
+                },
+                {
+                  "key": "vehicle_type_id",
+                  "value": "1",
+                  "type": "text"
+                },
+                {
+                  "key": "coupon_name",
+                  "value": "Test",
+                  "type": "text"
+                },
+                {
+                  "key": "coupon_code",
+                  "value": "CC001",
+                  "type": "text"
+                },
+                {
+                  "key": "from_date",
+                  "value": "2022-09-20",
+                  "type": "text"
+                },
+                {
+                  "key": "to_date",
+                  "value": "2022-09-30",
+                  "type": "text"
+                },
+                {
+                  "key": "discount_type",
+                  "value": "1",
+                  "description": "1 discount value, 2 discount percentage",
+                  "type": "text"
+                },
+                {
+                  "key": "discount",
+                  "value": "200",
+                  "type": "text"
+                },
+                {
+                  "key": "minimum_amount",
+                  "value": "1000",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{Noha Test}}/coupons/update-coupons",
+              "host": [
+                "{{Noha Test}}"
+              ],
+              "path": [
+                "coupons",
+                "update-coupons"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "remove coupon",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "coupon_id",
+                  "value": "1",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{host}}/coupons/remove-coupons",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "coupons",
+                "remove-coupons"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get all coupons",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "is_active_check",
+                  "value": "0",
+                  "description": "1 active coupons only , 0 all coupons without checking active status",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{host}}/coupons/get-all-coupons",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "coupons",
+                "get-all-coupons"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "set is active",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "coupon_id",
+                  "value": "1",
+                  "type": "text"
+                },
+                {
+                  "key": "is_active",
+                  "value": "1",
+                  "description": "1 active. 0 - not active",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{host}}/coupons/set-is-active",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "coupons",
+                "set-is-active"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get coupon by id",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "coupon_id",
+                  "value": "1",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{host}}/coupons/get-coupon-by-id",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "coupons",
+                "get-coupon-by-id"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Dashboard",
+      "item": [
+        {
+          "name": "get-dashboard-details",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
+            "url": {
+              "raw": "{{tuktuk test}}/dashboard/get-dashboard-details",
+              "host": [
+                "{{tuktuk test}}"
+              ],
+              "path": [
+                "dashboard",
+                "get-dashboard-details"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Additional Service",
+      "item": [
+        {
+          "name": "getAdditionalServiceByStatus",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "vehicle_owner_id",
+                  "value": "2",
+                  "type": "text"
+                },
+                {
+                  "key": "first_name",
+                  "value": "Malinda",
+                  "type": "text"
+                },
+                {
+                  "key": "last_name",
+                  "value": "Jayawardana",
+                  "type": "text"
+                },
+                {
+                  "key": "nic",
+                  "value": "882891006v",
+                  "type": "text"
+                },
+                {
+                  "key": "driving_license_no",
+                  "value": "252555",
+                  "type": "text"
+                },
+                {
+                  "key": "address_line_1",
+                  "value": "1887/1",
+                  "type": "text"
+                },
+                {
+                  "key": "address_line_2",
+                  "value": "Rajagiriya Road",
+                  "type": "text"
+                },
+                {
+                  "key": "city",
+                  "value": "Nawala",
+                  "type": "text"
+                },
+                {
+                  "key": "mobile_1_country_code",
+                  "value": "+94",
+                  "type": "text"
+                },
+                {
+                  "key": "mobile_1",
+                  "value": "0767443443",
+                  "type": "text"
+                },
+                {
+                  "key": "mobile_2_country_code",
+                  "value": "+94",
+                  "type": "text"
+                },
+                {
+                  "key": "mobile_2",
+                  "value": "0767443442",
+                  "type": "text"
+                },
+                {
+                  "key": "email",
+                  "value": "malinda@gmail.com",
+                  "type": "text"
+                },
+                {
+                  "key": "country_code",
+                  "value": "lk",
+                  "type": "text"
+                },
+                {
+                  "key": "account_no",
+                  "value": "5544455",
+                  "type": "text"
+                },
+                {
+                  "key": "account_name",
+                  "value": "malinda",
+                  "type": "text"
+                },
+                {
+                  "key": "bank",
+                  "value": "2",
+                  "type": "text"
+                },
+                {
+                  "key": "branch",
+                  "value": "Nawala",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{host}}/additional-services/get-additional-service-by-status",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "additional-services",
+                "get-additional-service-by-status"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get all additional services",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "vehicle_owner_id",
+                  "value": "2",
+                  "type": "text"
+                },
+                {
+                  "key": "first_name",
+                  "value": "Malinda",
+                  "type": "text"
+                },
+                {
+                  "key": "last_name",
+                  "value": "Jayawardana",
+                  "type": "text"
+                },
+                {
+                  "key": "nic",
+                  "value": "882891006v",
+                  "type": "text"
+                },
+                {
+                  "key": "driving_license_no",
+                  "value": "252555",
+                  "type": "text"
+                },
+                {
+                  "key": "address_line_1",
+                  "value": "1887/1",
+                  "type": "text"
+                },
+                {
+                  "key": "address_line_2",
+                  "value": "Rajagiriya Road",
+                  "type": "text"
+                },
+                {
+                  "key": "city",
+                  "value": "Nawala",
+                  "type": "text"
+                },
+                {
+                  "key": "mobile_1_country_code",
+                  "value": "+94",
+                  "type": "text"
+                },
+                {
+                  "key": "mobile_1",
+                  "value": "0767443443",
+                  "type": "text"
+                },
+                {
+                  "key": "mobile_2_country_code",
+                  "value": "+94",
+                  "type": "text"
+                },
+                {
+                  "key": "mobile_2",
+                  "value": "0767443442",
+                  "type": "text"
+                },
+                {
+                  "key": "email",
+                  "value": "malinda@gmail.com",
+                  "type": "text"
+                },
+                {
+                  "key": "country_code",
+                  "value": "lk",
+                  "type": "text"
+                },
+                {
+                  "key": "account_no",
+                  "value": "5544455",
+                  "type": "text"
+                },
+                {
+                  "key": "account_name",
+                  "value": "malinda",
+                  "type": "text"
+                },
+                {
+                  "key": "bank",
+                  "value": "2",
+                  "type": "text"
+                },
+                {
+                  "key": "branch",
+                  "value": "Nawala",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{Noha Test}}/additional-services/get-all-additional-services",
+              "host": [
+                "{{Noha Test}}"
+              ],
+              "path": [
+                "additional-services",
+                "get-all-additional-services"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "save Additional Service",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "service_type",
+                  "value": "test_postman1",
+                  "type": "text"
+                },
+                {
+                  "key": "service_charge",
+                  "value": "22",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{Noha Test}}/additional-services/save-additional-service",
+              "host": [
+                "{{Noha Test}}"
+              ],
+              "path": [
+                "additional-services",
+                "save-additional-service"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update additional service",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "service_type",
+                  "value": "test_postman1",
+                  "type": "text"
+                },
+                {
+                  "key": "service_charge",
+                  "value": "300",
+                  "type": "text"
+                },
+                {
+                  "key": "additional_service_id",
+                  "value": "8",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{host}}/additional-services/update-additional-service",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "additional-services",
+                "update-additional-service"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "remove additional service",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "additional_services_id",
+                  "value": "8",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{host}}/additional-services/remove-additional-service",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "additional-services",
+                "remove-additional-service"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "set is active",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "additional_services_id",
+                  "value": "8",
+                  "type": "text"
+                },
+                {
+                  "key": "is_active",
+                  "value": "1",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{host}}/additional-services/set-is-active",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "additional-services",
+                "set-is-active"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Cutomize Service",
+      "item": [
+        {
+          "name": "getServiceType",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
+            "url": {
+              "raw": "{{Noha Test}}/customize-service/get-service-type",
+              "host": [
+                "{{Noha Test}}"
+              ],
+              "path": [
+                "customize-service",
+                "get-service-type"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getCustomizedQuotationNumber",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "is_active_check",
+                  "value": "1",
+                  "description": "1 active, 0 all",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{Noha Test}}/customize-service/get-customized-quotation-number",
+              "host": [
+                "{{Noha Test}}"
+              ],
+              "path": [
+                "customize-service",
+                "get-customized-quotation-number"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "save customize-service-quotation",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "quotation_date",
+                  "value": "2025-08-21 01:22",
+                  "type": "text"
+                },
+                {
+                  "key": "currency",
+                  "value": "USD",
+                  "type": "text"
+                },
+                {
+                  "key": "first_name",
+                  "value": "formTest1",
+                  "type": "text"
+                },
+                {
+                  "key": "last_name",
+                  "value": "formTest1-2",
+                  "type": "text"
+                },
+                {
+                  "key": "passport_no",
+                  "value": "34444544444",
+                  "type": "text"
+                },
+                {
+                  "key": "country",
+                  "value": "Sri Lanka (ශ්‍රී ලංකාව)",
+                  "type": "text"
+                },
+                {
+                  "key": "country_code",
+                  "value": "lk",
+                  "type": "text"
+                },
+                {
+                  "key": "mobile_country_code",
+                  "value": "94",
+                  "type": "text"
+                },
+                {
+                  "key": "mobile_no",
+                  "value": "0998765456\n",
+                  "type": "text"
+                },
+                {
+                  "key": "email",
+                  "value": "test@gmail.com",
+                  "type": "text"
+                },
+                {
+                  "key": "grand_total",
+                  "value": "596.00",
+                  "type": "text"
+                },
+                {
+                  "key": "discount",
+                  "value": "4",
+                  "type": "text"
+                },
+                {
+                  "key": "sub_total",
+                  "value": "600.00",
+                  "type": "text"
+                },
+                {
+                  "key": "customized_additional_services",
+                  "value": "[{\"additional_service_id\":\"1\",\"request_date\":\"2025-08-14T14:42\",\"description\":\"hhh\",\"no_of_services\":\"6\",\"service_charge\":\"100\"}]\n",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{Noha Test}}/customize-service/save-customized-quotation",
+              "host": [
+                "{{Noha Test}}"
+              ],
+              "path": [
+                "customize-service",
+                "save-customized-quotation"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get customize-service-quotation",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
+            "url": {
+              "raw": "{{Noha Test}}/customize-service/get-customized-quotation",
+              "host": [
+                "{{Noha Test}}"
+              ],
+              "path": [
+                "customize-service",
+                "get-customized-quotation"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update customized service",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "edit_customized_id",
+                  "value": "24",
+                  "type": "text"
+                },
+                {
+                  "key": "edit_customized_quotation_id",
+                  "value": "CQ0003",
+                  "type": "text"
+                },
+                {
+                  "key": "edit_quotation_date",
+                  "value": "2025-09-07 08:30:00\n",
+                  "type": "text"
+                },
+                {
+                  "key": "edit_currency",
+                  "value": "USD",
+                  "type": "text"
+                },
+                {
+                  "key": "edit_first_name",
+                  "value": "sadun",
+                  "type": "text"
+                },
+                {
+                  "key": "edit_last_name",
+                  "value": "pawiththra",
+                  "type": "text"
+                },
+                {
+                  "key": "edit_passport_no",
+                  "value": "998665520",
+                  "type": "text"
+                },
+                {
+                  "key": "edit_country",
+                  "value": "United States",
+                  "type": "text"
+                },
+                {
+                  "key": "edit_country_code",
+                  "value": "us",
+                  "type": "text"
+                },
+                {
+                  "key": "edit_mobile_country_code",
+                  "value": "+1",
+                  "type": "text"
+                },
+                {
+                  "key": "edit_mobile_no",
+                  "value": "779823409",
+                  "type": "text"
+                },
+                {
+                  "key": "edit_email",
+                  "value": "sadun@gmail.com",
+                  "type": "text"
+                },
+                {
+                  "key": "edit_grand_total",
+                  "value": "440.00",
+                  "type": "text"
+                },
+                {
+                  "key": "edit_discount",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "edit_sub_total",
+                  "value": "440.00",
+                  "type": "text"
+                },
+                {
+                  "key": "edit_customized_additional_services",
+                  "value": "[{\"edit_additional_service_id\":\"1\",\"edit_request_date\":\"2025-08-29T22:47\",\"edit_description\":\"new2\",\"edit_no_of_services\":\"2\",\"edit_service_charge\":\"100\"},{\"edit_additional_service_id\":\"2\",\"edit_request_date\":\"2025-08-29T22:47\",\"edit_description\":\"new3\",\"edit_no_of_services\":\"2\",\"edit_service_charge\":\"100\"}]",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{Noha Test}}/customize-service/update-customized-quotation",
+              "host": [
+                "{{Noha Test}}"
+              ],
+              "path": [
+                "customize-service",
+                "update-customized-quotation"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get customized quotation by- id",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "customized_quotation_id",
+                  "value": "24",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{Noha Test}}/customize-service/get-customized-quotation-by-id",
+              "host": [
+                "{{Noha Test}}"
+              ],
+              "path": [
+                "customize-service",
+                "get-customized-quotation-by-id"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "reject customized quotation",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "customized_quotation_id",
+                  "value": "33",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{Noha Test}}/customize-service/reject-customized-quotation",
+              "host": [
+                "{{Noha Test}}"
+              ],
+              "path": [
+                "customize-service",
+                "reject-customized-quotation"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "confirm customized quotation",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "customized_quotation_id",
+                  "value": "22",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{Noha Test}}/customize-service/confirm-customized-quotation",
+              "host": [
+                "{{Noha Test}}"
+              ],
+              "path": [
+                "customize-service",
+                "confirm-customized-quotation"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delete customized quotation",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "customized_quotation_id",
+                  "value": "24",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{Noha Test}}/customize-service/delete-customized-quotation",
+              "host": [
+                "{{Noha Test}}"
+              ],
+              "path": [
+                "customize-service",
+                "delete-customized-quotation"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "remove customized quotation",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "customized_quotation_id",
+                  "value": "29",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{Noha Test}}/customize-service/remove-customized-quotation",
+              "host": [
+                "{{Noha Test}}"
+              ],
+              "path": [
+                "customize-service",
+                "remove-customized-quotation"
+              ],
+              "query": [
+                {
+                  "key": "customized_quotation_id",
+                  "value": "29",
+                  "disabled": true
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get all quotation-numbers",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "quotation_status_id",
+                  "value": "3",
+                  "type": "text",
+                  "uuid": "a02b34c6-49d2-4283-b89c-dcd402073080"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{Noha Test}}/customize-service/get-all-quotation-numbers",
+              "host": [
+                "{{Noha Test}}"
+              ],
+              "path": [
+                "customize-service",
+                "get-all-quotation-numbers"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "search cutomized quotation",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "quotation_ID",
+                  "value": "-1",
+                  "type": "text"
+                },
+                {
+                  "key": "request_date",
+                  "value": "2025-08-25 17:11:00",
+                  "type": "text"
+                },
+                {
+                  "key": "name",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "is_pending",
+                  "value": "0",
+                  "type": "text"
+                },
+                {
+                  "key": "is_confirm",
+                  "value": "0",
+                  "type": "text"
+                },
+                {
+                  "key": "mode",
+                  "value": "view",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{Noha Test}}/customize-service/search-customized-quotation",
+              "host": [
+                "{{Noha Test}}"
+              ],
+              "path": [
+                "customize-service",
+                "search-customized-quotation"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get Additional Service List",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "quotation_ID",
+                  "value": "-1",
+                  "type": "text"
+                },
+                {
+                  "key": "request_date",
+                  "value": "-1",
+                  "type": "text"
+                },
+                {
+                  "key": "name",
+                  "value": "-1",
+                  "type": "text"
+                },
+                {
+                  "key": "is_pending",
+                  "value": "1",
+                  "type": "text"
+                },
+                {
+                  "key": "is_confirm",
+                  "value": "0",
+                  "type": "text"
+                },
+                {
+                  "key": "mode",
+                  "value": "view",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{Noha Test}}/customize-service/get-additional-services-list",
+              "host": [
+                "{{Noha Test}}"
+              ],
+              "path": [
+                "customize-service",
+                "get-additional-services-list"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "search additional service",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "quotation_ID",
+                  "value": "-1",
+                  "type": "text"
+                },
+                {
+                  "key": "request_date",
+                  "value": "-1",
+                  "type": "text"
+                },
+                {
+                  "key": "name",
+                  "value": "hiru",
+                  "type": "text"
+                },
+                {
+                  "key": "is_pending",
+                  "value": "0",
+                  "type": "text"
+                },
+                {
+                  "key": "is_confirm",
+                  "value": "1",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{Noha Test}}/customize-service/search-additional-service",
+              "host": [
+                "{{Noha Test}}"
+              ],
+              "path": [
+                "customize-service",
+                "search-additional-service"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update Additional service date",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "additional_services",
+                  "value": "[{\"edit_row_id\":\"26\",\"edit_request_date\":\"2025-08-21T23:11\"}]",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{host}}/customize-service/update-Additional-services",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "customize-service",
+                "update-Additional-services"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "New Request",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": ""
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTc1NDAzMTk1NiwiZXhwIjoxNzg1NTY3OTU2LCJuYmYiOjE3NTQwMzE5NTYsImp0aSI6Iko1dkdPNldUZDFlTWNVWEIiLCJzdWIiOjEsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.bcDApiMvOIn0k9mC9f-m7Q-Xz2299nTKFXBr66FfrAM",
+        "type": "string"
+      }
+    ]
+  },
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "Noha Test",
+      "value": "https://nohatuktuk.com/test-api/public/api"
+    },
+    {
+      "key": "Noha Live",
+      "value": "https://nohatuktuk.com/api/public/api",
+      "type": "string"
+    }
+  ]
+}
