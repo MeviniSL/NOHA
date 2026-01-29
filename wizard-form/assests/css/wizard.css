@@ -47,6 +47,9 @@ body {
 .step-item.active .step-circle {
   background: #000;
 }
+.step-item.active .step-line {
+  background: #000;
+}
 
 .step-line {
   position: absolute;
@@ -105,20 +108,29 @@ body {
 
 .input-group .icon {
   position: absolute;
-  left: 15px;
-  top: 50%;
-  transform: translateY(-50%);
+  left: 12px;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
   color: #999;
-  font-size: 16px;
+  font-size: 18px;
+  pointer-events: none;
+  height: 100%;
+  width: 24px;
+  justify-content: center;
 }
 
 .input-group input {
   width: 100%;
-  padding: 14px 15px 14px 45px;
+  padding: 12px 15px 12px 44px;
   border: 1px solid #ddd;
   border-radius: 6px;
   font-size: 14px;
   color: #666;
+  height: 48px;
+  box-sizing: border-box;
+  vertical-align: middle;
 }
 
 .input-group input::placeholder {
@@ -134,52 +146,62 @@ body {
 /* ===== COUNTER ===== */
 .input-group.counter {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  align-items: center;
+  gap: 16px;
   border: 1px solid #ddd;
   border-radius: 6px;
-  padding: 10px 15px;
+  padding: 0;
+  height: 48px;
+  min-width: 0;
+  box-sizing: border-box;
 }
 
 .counter-label {
   font-size: 14px;
+  padding-left: 15px;
   color: #666;
   margin-bottom: 8px;
+  flex: 1;
 }
 
 .counter-controls {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.counter-btn {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  border: none;
-  background: #000;
-  color: #fff;
-  font-size: 20px;
-  cursor: pointer;
+  position: relative;
+  width: 120px;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background 0.3s;
-}
-
-.counter-btn:hover {
-  background: #333;
 }
 
 .counter-value {
-  width: 50px;
+  width: 100%;
   text-align: center;
-  border: none;
-  padding: 5px;
-  font-size: 16px;
-  font-weight: bold;
+  font-size: 1rem;
+  padding: 6px 32px;
+  box-sizing: border-box;
 }
+
+.counter-btn {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 32px;
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #fff;
+  z-index: 2;
+  background: #333;
+}
+
+.counter-btn:first-child {
+  left: 0;
+}
+
+.counter-btn:last-child {
+  right: 0;
+}
+
 
 /* ===== VEHICLES ===== */
 .vehicles-container {
